@@ -8,8 +8,15 @@ var xhr = new XMLHttpRequest();
 xhr.open("GET",api_endpoint,true);
 xhr.onload = function(){
   if(xhr.readyState == 4 && xhr.status == 200){
-  console.log(JSON.parse(xhr.response));
+  const data = JSON.parse(xhr.response);
+  const img = new Image();
+  img.onload = function(){
+    document.appendChild(img);
   }
+  img.src = data.image_url;
+  }
+xhr.onerror = function(){
+console.log("Network Error")}
 xhr.send();
 }
 ```
@@ -21,7 +28,15 @@ xhr.open("GET",api_endpoint,true);
 xhr.onload = function(){
   if(xhr.readyState == 4 && xhr.status == 200){
   console.log(JSON.parse(xhr.response));
+  const img = new Image();
+  img.onload = function(){
+    document.appendChild(img);
   }
+  img.src = data.high_res_comp;
+  }
+xhr.onerror = function(){
+console.log("Network Error")}
 xhr.send();
 }
 ```
+##### save this in JS File and run.
