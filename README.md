@@ -40,3 +40,9 @@ xhr.send();
 }
 ```
 ##### save this in JS File and run.
+
+...
+## Instructions
+git clone https://github.com/aman29271/shutterstock-and-getty-random-image.git
+cd shutterstock-and-getty-random-image
+Run image-download.py on Respective OS 
