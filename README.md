@@ -46,5 +46,6 @@ xhr.send();
 ```
 git clone https://github.com/aman29271/shutterstock-and-getty-random-image.git
 cd shutterstock-and-getty-random-image
+python image-download.py
 ```
-Run image-download.py on Respective OS 
+
